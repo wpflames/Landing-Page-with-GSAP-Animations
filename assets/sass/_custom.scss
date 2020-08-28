@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.slider{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $mirage;
+    z-index: -1;
+}
+
+nav{
+    display: grid;
+    grid-template-columns: 10% 1fr 1fr 10%;
+    min-height: 10vh;
+    color: white;
+    align-items: center;
+
+    #logo{
+        grid-column: 2/3;
+        font-size: 2rem;
+    }
+
+    .social{
+        display: flex;
+        justify-content: space-around;
+        width: 125px;
+        position: absolute;
+        right: 365px;
+        top: 25px;
+
+        a{
+            color: white;
+
+            svg{
+                fill: white;
+                height: 20px;
+            }
+        }
+    }
+
+    .hamburger{
+        justify-self: end;
+    }
+}
+
+section{
+    display: flex;
+    height: 90vh;
+    justify-content: center;
+    align-items: center;
+
+    .hero{
+        height: 100%;
+        width: 100%;
+        position: relative;
+
+        .content{
+            position: relative;
+        }
+
+        img{
+            width: 100%;
+            height: 60%;
+            object-fit: cover;
+            box-shadow: 0 15px 20px -12px rgba(0,0,0,.8);
+        }
+
+        .headline{
+            top: 70%;
+            left: 0;
+            font-size: 4rem;
+            color: white;
+            text-shadow: 0 0 5px black;
+            text-transform: uppercase;
+            z-index: 4;
+        }
+
+        p{
+            color: white;
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin-bottom: 20px;
+        }
+
+        .cta{
+            background: $aubergine;
+            color: white;
+            padding: 8px 15px;
+            text-decoration: none;
+            font-size: 1.4rem;
+            display: inline-block;
+            border-radius: 6px;
+            box-shadow: 0 15px 20px -12px rgba(0,0,0,.8);
+        }
+
+        &:after{
+            content: '';
+            background: black;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+        }
+
+        .num-wrapper{
+            position: absolute;
+            display: block;
+            right: 0;
+            top: 30px;
+            color: black;
+            font-size: 6rem;
+
+            .chevron {
+                position: absolute;
+                left: 0;
+                right: 0;
+                display: block;
+                margin: auto;
+                opacity: .2;
+            }
+
+            .num{
+                margin-bottom: -30px;
+                font-weight: 800;
+                opacity: .2;
+            }
+        }
+    }
+}
